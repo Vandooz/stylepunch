@@ -1,0 +1,180 @@
+/* BODY BACKGROUND */
+body {	
+	background-color: #393039;
+}
+
+
+/* Link */
+a, a:visited {
+	color: rgba(175, 195, 218, 1);
+}
+a:hover, a:active {
+	color: #d4e8ff;
+}
+/* Dark Link */
+.popupbox a {
+	color: #485A71;
+}
+
+
+/* Font */
+body, #navbar-login a:last-of-type {
+	color: #ccc;
+}
+/* Lighter Font */
+table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew , .quote, .quote a, .postcontent font[color="#444444"], input  {
+	color: #c9c9c9;
+}
+/* Lightest Font */
+#header, table.forums .forumdescription a, .threadmeta a , .postbitnew .postdetails:before, .post_button  {
+	color: #d9d9d9;
+}
+/* Darkest Font */
+table.forums tbody tr p , tr.threadbit p  {
+	color: #b9b9b9;
+}
+/* Opposite Font */
+.postcontent .quote font[color="#444444"], .popupbox {
+	color: #444;
+}
+/* Header/Secondary Font */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, table.forums thead a, .forumhead a, .threadlisthead a, .threadhead a, .threadfoot a, .blockhead a {
+	color: #EFE9D8;
+}
+/* Subheader/Tertiary Font */
+.posthead, .blocksubhead, .controlbar, .postbit-lite .postbithead {
+	color: rgba(197, 195, 187, 1);
+}
+
+
+/* Primary BG*/
+#header, .blockbody, .blockfoot, .blocksubfoot, table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd, .postbitold, .postbitnew, .pagination span, .converse_page {
+	background-color: #333;
+	outline-color: #555;
+}
+/* Primary Dark BG */
+.threadlist tr.old, #bottom_box {
+	background-color: #2c2c2c;
+	outline-color: #494949;
+}
+/* Primary Transparent Dark BG */
+table.forums .LastPostAvatar, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .quote .information, #content_inner table[width="100%"] ~ center {
+	background-color:rgba(0,0,0,.2);
+	outline-color: #999;
+}
+/* Primary Transparent Light BG */
+.threadlist tr[class~=threadbit] td.alt {
+	background-color: rgba(255,255,255,.025);
+}
+/* Primary Transparent Lighter BG */
+.cke_skin_kama .cke_editor .cke_rcombo a, .cke_skin_kama .cke_editor .cke_toolgroup {
+	background: rgba(255,255,255,.3);
+}
+/* Primary Lighter BG */
+.cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl, .userprof_content dl dt  {
+	background-color: #393939;
+	outline-color: #5a5a5a;
+}
+
+
+/* Secondary BG */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, .newcontent_textcontrol, .post_button, .pagination span:first-of-type , #event_types {
+	background-color:#722C4A;
+	outline-color: #A5426C;
+}
+/* Secondary Darker BG */
+.quote, .userprof_content dl dd {
+	background-color: #453940;
+	outline-color: #6F556F;
+}
+/* Secondary Darkest BG */
+.threadlist tr.sticky {
+	background-color: #453445;
+	outline-color: #6F556F;
+}
+/* Secondary Lightest BG */
+.postbitnew .postdetails:before {
+	background-color: #99496B;
+	outline-color: #663349;
+}
+/* Secondary SUPER LIGHT BG */
+.popupbox {
+	background-color: #D7CCD3;
+	outline-color: #8F7987;
+}
+
+
+/* Tertiary BG */
+.posthead, .blocksubhead, .controlbar, .postbit-lite .postbithead, #bottom_box div .img, .threadinfo .newposts:hover , .cke_top, .pagination span.selected, #footer {
+	background-color: rgba(72,90,113,1);
+}
+/* Tertiary Transparent Darkish BG */
+table.forums tbody .last_post_column {
+	background-color: rgba(150,180,255,.025);
+}
+/* Tertiary Transparent Dark BG */
+.threadinfo .newposts {
+	background-color: rgba(120,180,255,.1);
+}
+
+
+/* Dark Border*/
+.postbit, .postbitlegacy, .eventbit, .threadhead, .threadfoot, .posthead, .blockfoot, .blocksubfoot, .blockbody, .vbform .blockbody, .pagination, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd a, .quote, .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl{
+	border-color: #222;
+}
+
+
+/* (OPTIONAL) Fancy Outline */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, table.forums tbody tr, tr.threadbit, .posthead, .blocksubhead, .pagination span, #usercp_nav .blockbody, #bottom_box .td, #event_types, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .newcontent_textcontrol, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .converse_page, .popupbox, .postbitnew .postdetails:before {
+	outline-width: 1px;
+	outline-style: dotted;
+	outline-offset: -2px;
+}
+
+/* (Optional) Light Primary Fancy Outline */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, table.forums tbody tr, tr.threadbit, .posthead, .blocksubhead, .pagination span, #usercp_nav .blockbody, #bottom_box .td, #event_types, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .newcontent_textcontrol, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .converse_page {
+}
+
+/* (Optional) Dark Primary Fancy Outline */
+.popupbox, .postbitnew .postdetails:before {
+}
+
+/* super fancy fade; needs dynamic replacement for MAIN COMPONENT BG */
+#header:before {
+	background: linear-gradient(to bottom,  rgba(51,51,51,0) 0%,rgba(51,51,51,1) 100%);
+}
+
+/* change all hard-coded "red" to something better 
+   also highlight the ban reason different in event log 
+*/
+[style*="color: red"], [color="red"], .event b:last-of-type {
+	color: #e07e7e !important;
+}
+/* Highlight for new posts */
+.postbitnew .postdetails, .postbitnew .postfoot{
+	background: rgba(120,150,255,.07);
+	background: -moz-linear-gradient(left,  rgba(5,171,224,0.15) 0%, rgba(5,171,224,0) 10%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(5,171,224,0.15)), color-stop(10%,rgba(5,171,224,0))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  rgba(5,171,224,0.15) 0%,rgba(5,171,224,0) 10%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  rgba(5,171,224,0.15) 0%,rgba(5,171,224,0) 10%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  rgba(5,171,224,0.15) 0%,rgba(5,171,224,0) 10%); /* IE10+ */
+	background: linear-gradient(to right,  rgba(5,171,224,0.15) 0%,rgba(5,171,224,0) 10%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2605abe0', endColorstr='#0005abe0',GradientType=1 ); /* IE6-9 */
+}
+/* gold member */
+font[color="#A06000"] {
+	color: rgba(222, 199, 121, 1) !important;
+}
+/* mod member */
+span[style="color:#00aa00;font-weight:bold;"] {
+	color: rgba(121,222,152,1) !important;
+}
+/* spoiler tag override */
+.postcontent span[style="background-color: #333; color: #333; cursor: hand;"] {
+	background-color: #222 !important;
+	color: #222 !important;
+}
+.postcontent span[style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);"] {
+	background-color: #222 !important;
+	color: #ccc !important;
+}
