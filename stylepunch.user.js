@@ -6,10 +6,12 @@
 // @include         /http://.*facepunch\.com/.*/
 // @include         /https?://.*facepunch\.com/.*/
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
-// @resource        preCSS 
-// @resource        postCSS 
+// @resource        preCSS https://raw.githubusercontent.com/xelivous/stylepunch/master/structure.css
+// @resource        postCSS https://raw.githubusercontent.com/xelivous/stylepunch/master/foot.css
+// @resource		lessCSS https://raw.githubusercontent.com/xelivous/stylepunch/master/color.less
 // @license         MIT
 // @grant           GM_getResourceText
+// @grant			GM_getResourceURL
 // ==/UserScript==
 
 /* 
@@ -42,10 +44,15 @@ var config =
 	newPostHighlightColor: 'rgb(5,171,224)',	// when you see a new post, this gradient color is behind the avatar
 };
  
- 
 
  
-/* DONUT TOUCH ALL OF THIS STUFF BELOW TIA */
+/* 
+*******
+
+DONUT TOUCH ALL OF THIS STUFF BELOW TIA 
+
+*******
+*/
 
 
 var head = document.getElementsByTagName('head')[0];
@@ -61,6 +68,7 @@ var head = document.getElementsByTagName('head')[0];
 		}
 	}
 	
+	// old shit that was removed partially
 	/*if(!replacedLogo && document.getElementById('logo')){
 		document.getElementById('logo').childNodes[0].childNodes[0].setAttribute('src',self.options.fplogo);
 		replacedLogo = true;
@@ -80,22 +88,16 @@ link.setAttribute('rel', 'stylesheet');
 link.setAttribute('type','text/css');
 head.parentNode.appendChild(link);
 
-//add less.js
-var script = document.createElement('script');
-script.setAttribute('src', '//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js');
-head.appendChild(script);
-
+//define variables for less
 script = document.createElement('script');
 script.textContent = 
   'less = {\
     env: "development",\
-    async: false,\
-    fileAsync: false,\
     poll: 1000,\
     functions: {},\
     dumpLineNumbers: "comments",\
-    relativeUrls: false,\
-    rootpath: ":/a.com/"\
+    relativeUrls: true,\
+	globalVars: '+config+'\
   };';
 
 //add our basic structure styling
@@ -104,9 +106,18 @@ style.textContent = GM_getResourceText("preCSS");
 head.parentNode.appendChild(style);
 
 //process the color shit
-
+var link = document.createElement('link');
+link.setAttribute('rel', 'stylesheet/less');
+link.setAttribute('type', 'text/css');
+link.setAttribute('href', GM_getResourceURL("lessCSS"));
+head.parentNode.appendChild(link);
 
 //add post-color overrides
 style = document.createElement('style');
 style.textContent = GM_getResourceText("postCSS");
 head.parentNode.appendChild(style);
+
+//add less.js
+var script = document.createElement('script');
+script.setAttribute('src', '//cdnjs.cloudflare.com/ajax/libs/less.js/1.7.5/less.min.js');
+head.appendChild(script);
