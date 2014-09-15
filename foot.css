@@ -1,0 +1,30 @@
+/*******
+POST-COLOR FIXES
+********/
+/* profile tabs */
+dl.tabslight dd.selected a{
+    border-bottom: 1px solid transparent;
+}
+/* highlight for mod controls */
+.imod_highlight {
+	background-color: rgba(255, 86, 170, 0.2);
+}
+/* Username in member's page */
+.member_summary .blocksubhead {
+	background: transparent;
+	outline: 0px;
+}
+/* DUMB EVENT LOG SHIT */
+#content_inner div[style="border: 1px solid #888; background-color: #fafafa;"] {
+	background-color: #333 !important;
+	color: #bbb;
+	border: 1px solid #222 !important;
+}
+
+/* * 8
+ BACKUP */
+ 
+ /* input styling */
+/*input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .newcontent_textcontrol, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea {
+	color: #d9d9d9 !important;
+}/*

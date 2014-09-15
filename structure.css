@@ -1,0 +1,1206 @@
+/* * * * * * * * * * 
+ * GLOBAL SELECTORS
+ * * * * * * * * * */
+* {
+	position: relative;
+	background-repeat: no-repeat;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	height: auto;
+	transition: color 200ms ease-out 0ms,
+				background-color 200ms ease-out 0ms;
+	margin: 0em;
+    padding: 0em;
+	border: 0;
+}
+img, div, dl, dt, dd, ul, ol, li, th, td, input, button {
+	vertical-align: middle;
+}
+body{
+	font-family: sans-serif;
+	font-size: 12px;
+	line-height: 1.2em;
+	min-width: 800px;
+}
+h1,h2,h3,h4,h5 {
+	font-size: 1.15em;
+}
+a {
+	text-decoration: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0px;
+}
+td {
+	padding: .2em;
+}
+li {
+    list-style: none outside none;
+}
+input { 
+	font-size: .9em;
+	padding: .4em;
+}
+button, input.button {
+	cursor: pointer;
+}
+hr {
+	display: none;
+}
+
+/* * * * * * * * * * 
+ * GLOBAL ID STUFF 
+ * * * * * * * * * */
+#content_inner {
+    margin: 1.8em .9em;
+    clear: both;
+	overflow:hidden;
+	height: auto;
+}
+#bottom_box {
+    clear: both;
+	min-width: 100%;
+}
+#bottom_box .td {
+    padding: 1em;
+}
+#bottom_box .img {
+	width: 7em;
+}
+#footer {
+	padding: 2em;
+	font-size: 1.1em;
+	line-height: 1.3em;
+}
+#footer #fps {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+#footer .footer_links {
+	float: right;
+	z-index: 2;
+}
+
+
+
+/* * * * * * * * * * 
+ * UTILITY
+ * * * * * * * * * */
+.boxshadow, .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl, .thumbnail {
+	-webkit-box-shadow: 0em .5em .5em 0em rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:    0em .5em .5em 0em rgba(0, 0, 0, 0.3);
+	box-shadow:         0em .5em .5em 0em rgba(0, 0, 0, 0.3);
+}
+.hidden {
+	display: none;
+}
+.center {
+	text-align; center;
+}
+.popupbox {
+    display: none;
+    font-size: 1em;
+    padding: .5em;
+    position: absolute;
+	z-index: 100;
+}
+.commalist {
+	display: inline;
+}
+.commalist li {
+    display: inline-block;
+}
+.table {
+    display: table;
+    table-layout: fixed;
+}
+.td {
+    display: table-cell;
+}
+.tr {
+	display: table-row;
+}
+.newcontent_textcontrol {
+    font-size: 1.1em;
+	font-weight: bold;
+    padding: .5em 1.1em;
+    border: 1px solid;
+    display: block;
+    float: left;
+    clear: right;
+}
+.floatcontainer, .formcontrols .blockrow, dl.stats {
+    height: auto ;
+    overflow: hidden;
+	display: block;
+}
+.video {
+    height: 42.5em;
+    margin: 1em auto;
+    width: 71em;
+}
+.hd_video {
+    height: 62.5em;
+    margin: 1em auto;
+    max-height: 62.5em;
+    max-width: 106.67em;
+    width: 100%;
+}
+.video iframe, .hd_video iframe {
+	height: 100%;
+	width: 100%;
+}
+.smaller {
+	font-size: .9em;
+}
+.floatright {
+	float:right;
+	z-index:1;
+}
+
+
+/* * * * * * * * * * 
+ * HEADER 
+ * * * * * * * * * */
+#header {
+	overflow: hidden;
+	height:auto;
+	min-height: 7.5em;
+}
+#logo {
+	float:left;
+}
+#logo img {
+	max-height: 7.5em;
+	max-width: 22em;
+}
+#breadcrumb {
+	height: 5em;
+	margin-top: .5em;
+	overflow: hidden;
+}
+#header #breadcrumb #lastelement {
+	font-size: 1.5em;
+	margin: .25em 1em;
+}
+#header .navbarlink {
+	float: left;
+	font-size: .9em;
+	margin-left: 1em;
+	vertical-align: top;
+}
+#header .navbarlink img {
+	margin-right: .125em;
+}
+/* for some reason garry thought it would be hilarious to inline style the labpunch search bar */
+/*#header #navbarlinks .navbarlink[style="float: right; margin-right: 16px;position: relative;top: -6px;"]{
+	top: inherit !important;
+}*/
+#navbar-login {
+	float:right;
+	margin: .8em 1.4em;
+}
+#navbar-login .notifications, #navbar-login .buttons {
+    display: inline;
+	height: auto;
+	overflow: hidden;
+	position:relative;
+	top: -.2em;
+}
+#navbar-login .notifications a, #navbar-login .buttons a{
+	margin-right: .2em;
+}
+.doc_header hr { 
+	display: none; 
+}
+
+
+/* * * * * * * * * * 
+ * INDEX DISPLAY
+ * * * * * * * * * */
+td.FrontPageForums {
+	width: 50%;
+	vertical-align: top;
+}
+table.forums {
+	margin: auto;
+	padding: 0;
+	width: 100%;
+	margin-bottom: 15px;
+}
+table.forums .forumdata {
+    margin-left: 10px;
+	min-height: 25px; /* fix for hidden subforums */
+}
+table.forums tbody td{
+	padding: .4em;
+}
+table.forums tbody td, table.forums tbody td h2, table.forums tbody td span, table.forums tbody td p{
+	font-size: .9em;
+	line-height: .9em;
+}
+table.forums tbody h2 {
+	display:inline-block;
+}
+table.forums tbody .last_post_column{
+	width: 150px;
+	max-width: 150px;
+	min-width: 150px;
+	text-align: center;
+}
+
+table.forums .LastPostAvatar {
+    background-position: center center;
+    background-size: cover;
+    border-radius: 3px;
+    float: right;
+    height: 32px;
+	width: 32px;
+    margin-left: 5px;
+}
+table.forums .lastposttitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+	text-align: left;
+	margin: .5em .2em .3em .2em;
+}
+table.forums .lastpostdate {
+	text-align:right;
+}
+table.forums tbody tr:first-of-type {
+	display:none;
+}
+table.forums .forumdescription {
+	display: block;
+	margin: .25em .75em;
+}
+/* the statistics at the bottom of the index */
+#content_inner table[width="100%"] ~ center {
+	margin:1em 0em;
+	padding:1em;
+}
+/* hide the thing that tells you the time 
+   because you have a clock on your computer you dingus */
+.below_body {
+	display:none;
+}
+
+/* * * * * * * * * * 
+ * FORUM DISPLAY 
+ * * * * * * * * * */
+.above_threadlist, .below_threadlist, .above_postlist, .below_postlist {
+	overflow: hidden;
+	height: auto;
+	margin: 1.5em .5em;
+}
+.threadlist {
+    display: block;
+    clear: both;
+    width: 100%;
+    margin: .5em 0em;
+}
+.threadlist .threadmeta {
+	font-size: .8em;
+}
+p.threaddesc {
+    display: none;
+}
+#threads {
+	width: 100%;
+}
+/* the rating icons on threads in forumdisplay */
+#threads .threadinfo .threaddetails {
+    float: right;
+}
+#threads .threadinfo .threaddetails .threadratings img {
+	vertical-align: bottom;
+}
+
+/* the page listing after titles on threads in forumdisplay */
+.threadinfo .threadpagenav {
+    font-size: .7em;
+}
+.threadinfo {
+    width: 100%;
+}
+.threadlastpost {
+    font-size: .8em;
+    text-align: right;
+    white-space: nowrap;
+}
+.threadlastpost dd a{
+	font-weight: bold;
+}
+.threadreplies, .threadviews {
+    text-align: center;
+}
+#threads td {
+    min-width: 3.3em;
+    padding: .5em;
+}
+.threadinfo .newposts {
+    display: inline-block;
+    font-size: .7em;
+    padding: 2px;
+}
+/* Background of table headers */
+.forumhead, .threadlisthead, .threadhead, .threadfoot {
+	margin: 3px 6px;
+	font-size: 110%;
+}
+/* Foreground of table headers */
+.forumhead td, .threadlisthead td, .threadhead td, .threadfoot td {
+	padding: 6px 8px;
+	font-size: .9em;
+	font-weight: bold;
+}
+
+
+/* * * * * * * * * * 
+ * PAGINATION
+ * * * * * * * * * */
+.above_threadlist .threadpagenav .threadpagestats, .above_threadlist .threadpagenav .pagination {
+    float: right;
+    clear: left;
+}
+.above_threadlist .threadpagenav, .below_threadlist .threadpagenav {
+	float:right;
+}
+/* hide that dumb useless arrow */
+.pagination.popupmenu a.popupctrl {
+	background-image: none;
+	padding-right: unset;
+}
+/* THERES A FUCKING ARROW EMBEDDED NEXT TO ANOTHER ARROW ARE YOU SERIOUS */
+.pagination span.popupspan a.popupctrl img {
+	display: none;
+}
+
+
+
+/* * * * * * * * * * 
+ * USER CP
+ * * * * * * * * * */
+#usercp_nav {
+    float: left;
+    width: 16.5em;
+}
+#usercp_content {
+    width: 100%;
+    float: right;
+    padding-bottom: 2em;
+    margin-left: -17em;
+}
+#usercp_content > div, #usercp_content > form {
+    margin-left: 17em;
+}
+#usercp_nav li a {
+	display: block;
+	padding: .5em 1em;
+}
+#usercp_nav li a:hover{
+	background: rgba(255,255,255,.2);
+}
+.userlist_error {
+	display: none;
+}
+#userlist .blockrow {
+	overflow:visible;
+}
+#userlist #ignorelist_add_body{
+	bottom: 0px !important;
+	position: absolute;
+	height: 16.67em;
+	overflow: auto;
+	width: 50%;
+}
+/* WHAT THE ACTUAL FUCK IS THIS VBULLETIN */
+#profileform  input[src="clear.gif"] {
+	display: none;
+}
+
+ 
+/* * * * * * * * * * 
+ * MEMBER/PROFILE PAGE
+ * * * * * * * * * */
+.member_summary {
+    width: 240px;
+    float: left;
+    clear: right;
+    display: inline-block;
+    margin-bottom: 10px;
+	border: 1px solid;
+}
+.member_summary .blockrow {
+    font-size: .9em;
+}
+.member_summary .mini_stats h5 {
+    display: none;
+}
+.member_summary  .avatarcontainer {
+    margin: 0px auto 10px;
+    text-align: center;
+    display: block;
+}
+.member_summary .block {
+	padding: .5em;
+}
+.member_summary .block .blockrow {
+    border-top: 1px solid;
+}
+.member_summary #userinfoblock {
+	margin-top: 1.5em;
+}
+.userprof_content dl {
+    margin: 1em .7em;
+}
+#view-aboutme .userprof_content dl {
+	display: inline-block;
+}
+.userprof_content dl dt {
+    padding: .25em 1em;
+}
+.userprof_content dl dd {
+    padding: .25em 2em;
+}
+#usermenu {
+    font-size: .8em;
+    margin-left: 10px;
+}
+#usermenu li {
+    margin-bottom: 2px;
+}
+#usermenu img.inlineimg {
+	vertical-align: -4px;
+}
+.member_tabs {
+    margin-left: 250px;
+}
+dl.tabslight {
+    height: auto;
+    overflow: hidden;
+    padding-left: 10px;
+    z-index: 1;
+    border-bottom: 0px none;
+}
+dl.tabslight dt {
+    display: none;
+}
+dl.tabslight dd {
+    float: left;
+	top: 1px;
+}
+dl.tabslight dd.selected {
+    border-bottom: 1px solid;
+}
+dl.tabslight dd a {
+    font-weight: bold;
+	border: 1px solid;
+    text-align: center;
+    padding: .5em 1em;
+    min-width: 2em;
+    line-height: auto;
+    display: block;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 11px;
+}
+.profile_content {
+	margin-top: -1px;
+    display: block;
+    padding: 10px;
+    border: 1px solid;
+}
+.selected_view_section {
+    display: inline-block;
+    width: 100%;
+}
+.view_section {
+    display: none;
+}
+/* visitor comments */
+.userprof_title {
+	font-size: 1.3em;
+	padding: .8em;
+}
+.userprof_title span {
+	vertical-align: baseline;
+}
+/* what the actual fuck again */
+#above_postlist {
+	position:absolute;
+	top:.5em;
+	width: 100%;
+}
+
+
+/* * * * * * * * * * 
+ * THREAD DISPLAY
+ * * * * * * * * * */
+.postdetails {
+	white-space: nowrap;
+	width: 100%;
+	float:left;
+}
+.postbit, .postbitlegacy, .eventbit {
+	border: 1px solid;
+	border-bottom: 0px;
+}
+.postbit b, .postbitlegacy b, .eventbit b {
+	font-weight: 600;
+}
+.postbit-lite {
+	border: 0px;
+	clear: both;
+	margin-bottom: 1em;
+	display:block;
+	overflow:hidden;
+}
+.postbit-lite .postbit-chkbox {
+	float:right;
+	margin:.75em;
+	z-index: 1;
+}
+.postbit-lite .avatarlink {
+	float:left;
+	clear:right;
+	text-align: center;
+	vertical-align: middle;
+	width: 80px;
+	max-height: 80px;
+}
+.postbit-lite .avatarlink  img {
+	max-height: 80px;
+}
+.postbit-lite .postbithead {
+    padding: .7em;
+	margin-left: 80px;
+}
+.postbit-lite .posttext {
+	margin-left: 80px;
+	padding: 1em;
+}
+.postbit-lite .postbitfoot {
+    position: absolute;
+	top: 0;
+	right: 0;
+    margin: .75em 3em;
+}
+/* postcontent font adjustment */
+.postcontent span, .postcontent a, .postcontent b, .postcontent i, .postcontent  strong {
+	vertical-align: baseline;
+}
+.threadhead, .threadfoot {
+	width: 100%;
+	margin: 0px;
+	border: 1px solid;
+	clear: both;
+	padding: 6px 10px;
+	overflow: hidden;
+	height: auto;
+}
+.threadhead {
+	border-bottom: 0;
+}
+.threadhead h2 > span, .threadfoot h2 > span {
+    clear: right;
+    color: #FFF;
+    display: block;
+    float: left;
+    padding: 4px 0px;
+}
+.threadhead  #subscribe_button, .threadfoot #subscribe_button, .threadhead #inlinemod_controls, .threadfoot #inlinemod_controls {
+	float: right;
+}
+
+ /* the headerbar for posts */
+.posthead {
+    border-bottom: 1px solid;
+    clear: both;
+    display: block;
+    float: left;
+    padding: 3px 0px;
+    width: 100%;
+	font-size: .9em;
+	z-index:2;
+}
+.posthead #time_image {
+	float: left;
+	margin: 0px 3px;
+	vertical-align: top;
+}
+.posthead .postdate {
+	float: left;
+	clear: right;
+	margin-top: 1px;
+}
+.posthead .nodecontrols {
+	padding: 4px 10px 0px;
+	position: absolute;
+	right: 0px;
+	text-align: right;
+	top: 0px;
+	width: auto;
+}
+.posthead .nodecontrols img {
+	vertical-align: top;
+}
+/* the area around avatar/username */
+.postdetails .userinfo {
+    display: block;
+    float: left;
+    overflow: hidden;
+    padding: .8em;
+    width: 11em;
+}
+.postdetails .userinfo .username_container {
+	margin-bottom: 3px;
+}
+.postdetails .userinfo #userdata {
+	padding-top: 20px;
+	text-align: center;
+	overflow:visible;
+}
+.postbitlegacy hr, .postbit hr , .eventbit hr {
+	display: none;
+}
+.postdetails .userinfo #userdata #userstats {
+	margin: 10px;
+	font-size: .8em;
+	line-height: 1em;
+}
+/* icons under avatar */
+.postdetails .userinfo #userdata .imlinks {
+	white-space: normal;
+	width: 100%;
+    float: left;
+}
+.imlinks img {
+    display: inline;
+}
+/* post body */
+.postdetails .postbody {
+    margin-left: 140px;
+    padding-bottom: 1em;
+    white-space: normal;
+}
+.postdetails .postbody .postrow {
+	padding: 1.2em 1em;
+}
+.postdetails .content img {
+	max-width: 100%; 
+	max-height: 1024px; 
+}
+.postdetails .content img[class~="thumbnail"], .quote .message img { 
+	max-width: 800px; 
+	max-height: 350px;
+}
+
+/* post foot */
+.postfoot {
+	display: block;
+    clear: both;
+    overflow:hidden;
+	height:auto;
+    padding: 4em .5em .2em .5em;
+    width: 100%;
+}
+.postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost {
+	float: right;
+	font-weight: 700;
+	padding: .5em 1em;
+	font-size: .9em;
+	margin-left: .5em;
+	margin-top: -.5em;
+}
+.postfoot .postlinking {
+	float: left;
+	min-width: 130px;
+}
+.postfoot .postrating {
+    float: right;
+    white-space: nowrap;
+	font-size: .9em;
+}
+.postfoot .rating_results {
+	float: left;
+	font-size: .9em;
+	font-weight: 400;
+	white-space: nowrap;
+}
+.postfoot .rating_results span {
+	margin-right: .9em;
+}
+.postfoot .rating_results span:last-of-type {
+	margin-right: .3em;
+}
+.postfoot .rating_results img {
+	margin-top:-3px;
+}
+/* ratings user list box */
+.ratingslist .ratingsbox {
+    border: 1px dashed #777;
+    float: left;
+    margin-right: 10px;
+	padding-top: 5px;
+}
+.ratingslist .ratingsbox:last-of-type {
+	margin-right: 0;
+}
+.ratingslist .ratingsbox span {
+	margin: 0 5px;
+}
+body .ratingslist .ratingsbox ul {
+	overflow-y: auto;
+	margin-bottom: 3px;
+	max-height: 200px;
+	overflow-x: hidden;
+}
+body .ratingslist .ratingsbox ul li {
+	height: auto;
+	overflow: hidden;
+	
+	padding: 2px 4px;
+}
+body .ratingslist .ratingsbox ul li:nth-child(even) {
+	background: rgba(0,0,0,0.10);
+}
+body .ratingslist .ratingsbox ul li a {
+	white-space: pre-line;
+	margin-right: 15px;
+}
+/* quotes */
+.quote {
+    max-width: 100%;
+    border: 1px solid;
+    border-radius: 5px;
+    margin: 10px;
+	display: table;
+	overflow: hidden;
+}
+.quote .message {
+    font-size: .9em;
+    padding: 10px;
+	left: 0px;
+    right: 0px;
+}
+.quote .information {
+    font-size: .95em;
+    padding: 4px;
+	font-weight: bold;
+}
+/* quickreply */
+#quick_reply #quickreply_title {
+	margin-top: 0px;
+}
+
+/* * * * * * * * * * 
+ * EVENT LOG
+ * * * * * * * * * */
+#event_types {
+	margin: 1em 0em;
+	padding: .75em;
+}
+.eventtime {
+	margin: 1em .2em;
+	font-weight: bold;
+}
+.eventtime:first-of-type {
+	margin-top: .5em;
+}
+.eventtime:last-of-type {
+	margin-bottom: .5em;
+}
+.eventtime .event{
+	margin: .5em 1em;
+	font-weight: normal;
+}
+div:not(.eventlog) .events .eventtime:before {
+	content: "▶";
+	position: absolute;
+	left:-1.25em;
+}
+
+
+/* * * * * * * * * * 
+ * COMPONENTS AND INPUTS
+ * * * * * * * * * */
+.blockhead {
+	padding: .6em;
+	font-weight: bolder;
+}
+.blocksubhead {
+    padding: .5em;
+    font-weight: bold;
+}
+.blockbody {
+	padding: 1em;
+}
+.section {
+	padding: .6em;
+}
+.blockrow {
+	margin: .1em .4em .2em .4em;
+}
+.blockrow .group li {
+	margin-bottom: .5em;
+}
+.blockfoot, .blocksubfoot {
+    display: block;
+    clear: both;
+    padding: .75em;
+    border: 1px solid;
+	border-top: 0px;
+}
+
+/* subcomponents */
+.groupbit {
+    min-height: 6.7em;
+    padding-left: 6.7em;
+}
+.blockbody .groupbit {
+    margin-bottom: .5em;
+}
+.blockbody .groupbit .stats {
+	float: right;
+	margin: .5em;
+}
+.blockbody .groupbit .posttext {
+	margin: .5em;
+}
+
+/* form stuff */
+.vbform .blockhead {
+    margin-top: 2em;
+}
+.formcontrols label {
+    width: 16em;
+    float: left;
+    font-size: 1.1em;
+}
+.formcontrols  .description {
+    max-width: 51.7em;
+    margin-left: 22em;
+    overflow: hidden;
+    margin-bottom: 1em;
+	font-size: 0.8em;
+}
+.formcontrols  .rightcol .description {
+    margin-left: 0px;
+}
+form .rightcol {
+    display: block;
+    margin-left: 17.7em;
+    max-width: 41.3em;
+    float: none;
+}
+.formcontrols .rightcol .primary {
+    width: 50%;
+}
+.formcontrols .group .textbox {
+    width: 248px;
+}
+.formcontrols  input.textbox[size] {
+    width: auto;
+}
+.formcontrols  input.textbox.numeric {
+    text-align: right;
+}
+.formcontrols .group.multifield li {
+    float: left;
+    margin-right: 1em;
+}
+.formcontrols  .group.multifield label {
+    margin-bottom: .1em;
+    display: block;
+    float: none;
+    width: auto;
+}
+.formcontrols .group.checkradio li label {
+    float: none;
+}
+.formcontrols label.full {
+    width: auto;
+    float: none;
+    font-weight: bold;
+}
+.actionbuttons .group {
+    float: none;
+    text-align: right;
+}
+.restore p, .restore fieldset, .restore table, .restore pre {
+    margin-bottom: 1em;
+}
+
+/* * * * * * * * * * 
+ * REGISTRATION
+ * * * * * * * * * */
+Trules {
+    height: 7em;
+    overflow: auto;
+    padding: 1em;
+    border: 1px solid;
+}
+#registerform .blockbody:nth-child(2) {
+    border-bottom-width: 1px;
+}
+
+
+/* * * * * * * * * * 
+ * MODERATORS PAGE
+ * * * * * * * * * */
+ .block .blockbody .avatarlink {
+    width: 6.67em;
+    height: 6.67em;
+	overflow: hidden;
+	float: left;
+	position: absolute;
+	top: 0px;
+	left: .85em;
+}
+.block .blockbody .avatarlink img {
+    max-width: 6.67em;
+    max-height: 6.67em;
+}
+
+/* * * * * * * * * * 
+ * REPLY
+ * * * * * * * * * */
+/* quickreply */
+.qrcontainer {
+	margin:1em 0em;
+}
+/* text editor itself */
+.cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl {
+	overflow: hidden;
+}
+.cke_skin_kama .cke_wrapper {
+	padding: 0px;
+}
+.cke_top {
+	padding: .25em .25em 0em .25em;
+}
+.texteditor textarea.cke_source {
+	padding: .2em .4em;
+}
+
+
+
+
+/* * * * * * * * * * 
+ * USERTITLES
+ * * * * * * * * * */
+.usertitle {
+	white-space: normal;
+	max-width: 11em;
+	display: inline-block;
+}
+.usertitle * font[size], .usertitle font[size], 
+.usertitle * font[size="7"], .usertitle font[size="7"] {
+	font-size:2.5em;
+	line-height: .9em;
+}
+.usertitle * font[size="6"], .usertitle font[size="6"] {
+	font-size:2em;
+}
+.usertitle * font[size="5"], .usertitle font[size="5"] {
+	font-size:1.6em;
+}
+.usertitle * font[size="4"], .usertitle font[size="4"] {
+	font-size:1.1em;
+}
+.usertitle * font[size="3"], .usertitle font[size="3"] {
+	font-size:1em;
+}
+.usertitle * font[size="2"], .usertitle font[size="2"] {
+	font-size:.9em;
+}
+.usertitle * font[size="1"], .usertitle font[size="1"] {
+	font-size:.8em;
+}
+
+/* error/redirect page */
+.redirect_page {
+	margin: 2em;
+}
+
+/* * * * * * * * * * 
+ * HACKS BECAUSE VBULLETIN IS SHIT
+ * * * * * * * * * */
+/* fix for inline margin shit in popup box icons at top */
+.urlbox a img[style*="top"] {
+	top: auto !important;
+}
+/* remove all but the last of P tags in the statistics at the bottom of the index 
+   can't use :empty because of fucking &nbsp;!!! */
+#content_inner table[width="100%"] ~ center p:not(:last-of-type) {
+	display:none;
+}
+
+/* icon swap */
+.threadinfo .newposts a:before, .threadlastpost .lastpostdate:after, .last_post_column .lastpostdate a:after {
+	font-weight: 900;
+	background: #722C4A;
+	border-radius: 100%;
+	padding: 0px .25em;
+	text-shadow: rgba(0,0,0,.3) -1px -1px;
+}
+.threadinfo .newposts img, .lastpostdate img {
+	width: 0;
+	margin-right: 0px;
+}
+.threadinfo .newposts a:before {
+	content: "✓";
+}
+.threadlastpost .lastpostdate:after, .last_post_column .lastpostdate a:after{
+	content: "▶";
+}
+/* bottom box icon swap */
+#bottom_box #whos_reading img, #bottom_box #mod_list img {
+	display:none;
+}
+#bottom_box #whos_reading .img, #bottom_box #mod_list .img  {
+	text-align: center;
+}
+#bottom_box #whos_reading .img:after, #bottom_box #mod_list .img:after {
+	cursor: default;
+	font-size: 2.25em;
+	vertical-align: bottom;
+	text-shadow: rgba(0,0,0,.2) -1px -1px;
+}
+#bottom_box #whos_reading .img:after {
+	content: "⚇";
+}
+#bottom_box #mod_list .img:after {
+	content: "♗";
+}
+
+
+/* * * * * * * * * * 
+ * EXTRA STYLE STUFF
+ * * * * * * * * * */
+ body {
+	background:
+		linear-gradient(135deg, rgba(0,0,0,.05) 22px, rgba(255,255,255,.03) 22px, rgba(255,255,255,.03) 24px, transparent 24px, transparent 67px, rgba(255,255,255,.03) 67px, rgba(255,255,255,.03) 69px, transparent 69px),
+		linear-gradient(225deg, rgba(0,0,0,.05) 22px, rgba(255,255,255,.03) 22px, rgba(255,255,255,.03) 24px, transparent 24px, transparent 67px, rgba(255,255,255,.03) 67px, rgba(255,255,255,.03) 69px, transparent 69px)0 64px;
+	background-size: 64px 64px;
+}
+#header {
+	background-repeat: repeat;
+	background-image: repeating-linear-gradient(135deg, transparent, transparent 5px, rgba(255,255,255,.05) 5px, rgba(255,255,255,.05) 10px);
+}
+#header div {
+	z-index: 2;
+}
+#header:before {
+	content: ' ';
+	z-index: 1;
+	display: block;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	top: 0%;
+	opacity: 1;
+	position: absolute;
+}
+
+/* make certain text POP?? */
+#header, table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead {
+	text-shadow: 0px -1px 0px rgba(0,0,0,.5),
+				 0px 1px 0px rgba(255,255,255,.1);
+	font-weight: bold;
+}
+/* POP v2 */
+.posthead, .blocksubhead, .controlbar, .postbit-lite .postbithead  {
+	font-weight: bold;
+	text-shadow: 0px -1px 0px rgba(0,0,0,.1),
+				 0px 1px 0px rgba(255,255,255,.2); 
+}
+
+/* border stuff */
+.pagination, .vbform .blockbody {
+	border: 1px solid;
+}
+.vbform .blockbody {
+    border-width: 0px 1px;
+}
+.threadinfo .newposts {
+	border: 1px solid rgba(255,255,255,.1);
+}
+.wysiwyg_block .blockfoot, .qrcontainer, span.cke_skin_kama {
+	border: 0;
+}
+.thumbnail {
+	border-width: 0px !important; /* garry pls */
+}
+.thumbnail:hover {
+	outline: 2px solid rgba(0,180,255,.5);
+	outline-offset: -1px;
+	z-index:1;
+}
+.pagination span, .pagination span.first_last {
+    border-right: 1px solid rgba(0,0,0,.2);
+}
+
+/* bold this shit */
+table.forums tbody tr p , tr.threadbit p {
+	font-weight: bold;
+}
+
+.threadlist .old  td{
+	opacity: 0.7;
+}
+.postbitnew .postdetails:before {
+    content: "NEW";
+    position: absolute;
+    font-weight: bold;
+    z-index: 1;
+	padding: 0.4em 2em;
+    top: 0.5em;
+	right: -1.7em;
+    transform: rotate(45deg);
+}
+.online {
+	border-bottom: 1px dotted rgba(120,255,140,.7);
+}
+.cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl {
+	overflow: hidden;
+	border-radius: .45em;
+}
+.cke_skin_kama .cke_wrapper {
+	padding: 0em;
+}
+.cke_top {
+	padding: .25em .25em 0em .25em;
+}
+.texteditor textarea.cke_source {
+	padding: .2em .4em;
+}
+/* EDITED: TAG */
+.postcontent font[color="#444444"] {
+	font-size: 1em;
+}
+.pagination span {
+	display: inline-block;
+	float: left;
+	clear: right;
+    overflow: hidden;
+    height: auto;
+    padding: .5em .4em;
+}
+/* registration stuff */
+div.greenbox {
+    border: 1px solid #373;
+    background:  #BFB;
+    color: #373;
+    padding: .2em;
+}
+input.greenbox {
+    background: url('/fp/vb/misc/tick.png') no-repeat scroll right center transparent;
+}
+.converse_page {
+	padding: .5em 1em;
+	overflow: hidden;
+}

@@ -1,0 +1,215 @@
+/* Functions */
+
+/* Change the color lightness */
+.changeColorL(@c, @a, @b) when (lightness(@c) >= 50% ) and (@b) {
+	@changedColor: darken(@c, @a);
+}
+.changeColorL(@c, @a, @b) when (lightness(@c) >= 50% ) and not (@b) {
+	@changedColor: lighten(@c, @a);
+}
+.changeColorL(@c, @a, @b) when (lightness(@c) < 50% ) and (@b) {
+	@changedColor: lighten(@c, @a);
+}
+.changeColorL(@c, @a, @b) when (lightness(@c) < 50% ) and not (@b) {
+	@changedColor: darken(@c, @a);
+}
+
+/* BODY BACKGROUND */
+body {	
+	background-color: @bodyBG;
+}
+
+
+/* Link */
+a, a:visited {
+	color: @linkColor;
+}
+a:hover, a:active {
+	color: lighten(@linkColor, 10%);
+}
+/* Dark Link */
+.popupbox a {
+	color: #fff - @linkColor;
+}
+
+
+/* Font */
+body, #navbar-login a:last-of-type {
+	color: @mainFontColor;
+}
+/* Lighter Font */
+table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew , .quote, .quote a, .postcontent font[color="#444444"], input  {
+	.changeColorL(@mainFontColor, 5%, true);
+	color: @changedColor;
+}
+/* Lightest Font */
+#header, table.forums .forumdescription a, .threadmeta a , .postbitnew .postdetails:before, .post_button  {
+	.changeColorL(@mainFontColor, 10%, true);
+	color: @changedColor;
+}
+/* Darkest Font */
+table.forums tbody tr p , tr.threadbit p  {
+	.changeColorL(@mainFontColor, 10%, false);
+	color: @changedColor;
+}
+/* Opposite Font */
+.postcontent .quote font[color="#444444"], .popupbox {
+	color: #fff - @mainFontColor;
+}
+/* Header/Secondary Font */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, table.forums thead a, .forumhead a, .threadlisthead a, .threadhead a, .threadfoot a, .blockhead a {
+	color: @headerFontColor;
+}
+/* Subheader/Tertiary Font */
+.posthead, .blocksubhead, .controlbar, .postbit-lite .postbithead {
+	color: @subheaderFontColor;
+}
+
+
+/* Primary BG*/
+#header, .blockbody, .blockfoot, .blocksubfoot, table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd, .postbitold, .postbitnew, .pagination span, .converse_page {
+	background-color: @primaryBG;
+	.changeColorL(@primaryBG, 10%, false);
+	outline-color: @changedColor;
+}
+/* Primary Dark BG */
+.threadlist tr.old, #bottom_box {
+	.changeColorL(@primaryBG, 5%, false);
+	background-color: @changedColor;
+	outline-color: @primaryBG;
+}
+/* Primary Transparent Dark BG */
+table.forums .LastPostAvatar, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .quote .information, #content_inner table[width="100%"] ~ center {
+	background-color: fade(@primaryBG, 20%);
+	outline-color: @primaryBG;
+}
+/* Primary Transparent Light BG */
+.threadlist tr[class~=threadbit] td.alt {
+	background-color: fade(#fff - @primaryBG, 3%);
+}
+/* Primary Transparent Lighter BG */
+.cke_skin_kama .cke_editor .cke_rcombo a, .cke_skin_kama .cke_editor .cke_toolgroup {
+	background: fade(#fff - @primaryBG, 30%);
+}
+/* Primary Lighter BG */
+.cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl, .userprof_content dl dt  {
+	.changeColorL(@primaryBG, 5%, true);
+	background-color: @changedColor;
+	
+	.changeColorL(@primaryBG, 10%, true);
+	outline-color: @changedColor;
+}
+
+
+/* Secondary BG */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, .newcontent_textcontrol, .post_button, .pagination span:first-of-type , #event_types {
+	background-color:@secondaryBG;
+	.changeColorL(@secondaryBG, 5%, true);
+	outline-color: @changedColor;
+}
+/* Secondary Darker BG */
+.quote, .userprof_content dl dd {
+	.changeColorL(@secondaryBG, 10%, false);
+	background-color: @changedColor;
+	.changeColorL(@secondaryBG, 5%, false);
+	outline-color: @changedColor;
+}
+/* Secondary Darkest BG */
+.threadlist tr.sticky {
+	.changeColorL(@secondaryBG, 20%, false);
+	background-color: @changedColor;
+	.changeColorL(@secondaryBG, 15%, false);
+	outline-color: @changedColor;
+}
+/* Secondary Lightest BG */
+.postbitnew .postdetails:before {
+	.changeColorL(@secondaryBG, 15%, true);
+	background-color: @changedColor;
+	.changeColorL(@secondaryBG, 10%, true);
+	outline-color: @changedColor;
+}
+/* Secondary SUPER LIGHT BG */
+.popupbox {
+	background-color: #fff - @secondaryBG;
+	.changeColorL(#fff - @secondaryBG, 5%, true);
+	outline-color: @changedColor;
+}
+
+
+/* Tertiary BG */
+.posthead, .blocksubhead, .controlbar, .postbit-lite .postbithead, #bottom_box div .img, .threadinfo .newposts:hover , .cke_top, .pagination span.selected, #footer {
+	background-color: @tertiaryBG;
+}
+/* Tertiary Transparent Darkish BG */
+table.forums tbody .last_post_column {
+	background-color: fade(@tertiaryBG, 10%);
+}
+/* Tertiary Transparent Dark BG */
+.threadinfo .newposts {
+	background-color: fade(@tertiaryBG, 30%);
+}
+
+
+/* Dark Border*/
+.postbit, .postbitlegacy, .eventbit, .threadhead, .threadfoot, .posthead, .blockfoot, .blocksubfoot, .blockbody, .vbform .blockbody, .pagination, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd a, .quote, .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl{
+	border-color: darken(@primaryBG);
+}
+
+
+/* (OPTIONAL) Fancy Outline */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, table.forums tbody tr, tr.threadbit, .posthead, .blocksubhead, .pagination span, #usercp_nav .blockbody, #bottom_box .td, #event_types, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .newcontent_textcontrol, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .converse_page, .popupbox, .postbitnew .postdetails:before {
+	outline-width: 1px;
+	outline-style: dotted;
+	outline-offset: -2px;
+}
+
+/* (Optional) Light Primary Fancy Outline */
+table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, table.forums tbody tr, tr.threadbit, .posthead, .blocksubhead, .pagination span, #usercp_nav .blockbody, #bottom_box .td, #event_types, input, .post_button, .postfoot .postcontrols .newreply, .postfoot .postcontrols .editpost, .newcontent_textcontrol, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea, .converse_page {
+
+}
+
+/* (Optional) Dark Primary Fancy Outline */
+.popupbox, .postbitnew .postdetails:before {
+
+}
+
+/* super fancy fade; needs dynamic replacement for MAIN COMPONENT BG */
+#header:before {
+	background: linear-gradient(to bottom,  fade(@primaryBG, 0%) 0%, fade(@primaryBG, 100%) 100%);
+}
+
+/* change all hard-coded "red" to something better 
+   also highlight the ban reason different in event log 
+*/
+[style*="color: red"], [color="red"], .event b:last-of-type {
+	color: @redColor !important;
+}
+/* Highlight for new posts */
+.postbitnew .postdetails, .postbitnew .postfoot{
+	background: fade(@newPostHighlightColor, 7%);
+	background: -moz-linear-gradient(left,  fade(@newPostHighlightColor, 15%) 0%, fade(@newPostHighlightColor, 0%) 10%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,fade(@newPostHighlightColor, 15%)), color-stop(10%,fade(@newPostHighlightColor, 0%))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  fade(@newPostHighlightColor, 15%) 0%,fade(@newPostHighlightColor, 0%) 10%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,   fade(@newPostHighlightColor, 15%) 0%,fade(@newPostHighlightColor, 0%) 10%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  fade(@newPostHighlightColor, 15%) 0%,fade(@newPostHighlightColor, 0%) 10%); /* IE10+ */
+	background: linear-gradient(to right,  fade(@newPostHighlightColor, 15%) 0%,fade(@newPostHighlightColor, 0%) 10%); /* W3C */
+}
+/* gold member */
+font[color="#A06000"] {
+	color: @goldMemberColor !important;
+}
+/* mod member */
+span[style="color:#00aa00;font-weight:bold;"] {
+	color: @modMemberColor !important;
+}
+/* spoiler tag override */
+.postcontent span[style="background-color: #333; color: #333; cursor: hand;"] {
+	.changeColorL(@primaryBG, 5%, false);
+	background-color: #222 !important;
+	color: #222 !important;
+}
+.postcontent span[style="background-color: rgb(51, 51, 51); color: rgb(255, 255, 255);"] {
+	.changeColorL(@primaryBG, 5%, false);
+	background-color: #222 !important;
+	color: #ccc !important;
+}
