@@ -1168,6 +1168,7 @@ table.forums tbody tr p , tr.threadbit p {
 .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl {
 	overflow: hidden;
 	border-radius: .45em;
+	background: transparent;
 }
 .cke_skin_kama .cke_wrapper {
 	padding: 0em;

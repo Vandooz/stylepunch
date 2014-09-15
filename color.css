@@ -26,7 +26,7 @@ table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew , .quote, .quote a
 	color: #c9c9c9;
 }
 /* Lightest Font */
-#header, table.forums .forumdescription a, .threadmeta a , .postbitnew .postdetails:before, .post_button  {
+#header, table.forums .forumdescription a, .threadmeta a , .postbitnew .postdetails:before, .post_button, .texteditor.forum .cke_skin_kama textarea.cke_source, .texteditor.forum textarea  {
 	color: #d9d9d9;
 }
 /* Darkest Font */
@@ -35,7 +35,7 @@ table.forums tbody tr p , tr.threadbit p  {
 }
 /* Opposite Font */
 .postcontent .quote font[color="#444444"], .popupbox {
-	color: #444;
+	color: #ddd;
 }
 /* Header/Secondary Font */
 table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, table.forums thead a, .forumhead a, .threadlisthead a, .threadhead a, .threadfoot a, .blockhead a {
@@ -119,7 +119,7 @@ table.forums tbody .last_post_column {
 
 
 /* Dark Border*/
-.postbit, .postbitlegacy, .eventbit, .threadhead, .threadfoot, .posthead, .blockfoot, .blocksubfoot, .blockbody, .vbform .blockbody, .pagination, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd a, .quote, .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl{
+.postbit, .postbitlegacy, .eventbit, .threadhead, .threadfoot, .posthead, .blockfoot, .blocksubfoot, .blockbody, .vbform .blockbody, .pagination, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd a, .quote, .cke_skin_kama .cke_wrapper.cke_ltr, .cke_skin_kama .cke_wrapper.cke_rtl, .newcontent_textcontrol {
 	border-color: #222;
 }
 
