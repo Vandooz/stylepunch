@@ -34,8 +34,8 @@ table.forums tbody tr p , tr.threadbit p  {
 	color: #b9b9b9;
 }
 /* Opposite Font */
-.postcontent .quote font[color="#444444"], .popupbox {
-	color: #ddd;
+.popupbox {
+	color: #444;
 }
 /* Header/Secondary Font */
 table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .blockhead, .vbform .blockhead, table.forums thead a, .forumhead a, .threadlisthead a, .threadhead a, .threadfoot a, .blockhead a {
