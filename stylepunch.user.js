@@ -8,7 +8,7 @@
 // @require         http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js
 // @resource        preCSS 
 // @resource        postCSS 
-// @license         the best license tbh
+// @license         MIT
 // @grant           GM_getResourceText
 // ==/UserScript==
 
