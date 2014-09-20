@@ -48,7 +48,7 @@ table.forums thead, .forumhead, .threadlisthead, .threadhead, .threadfoot, .bloc
 
 
 /* Primary BG*/
-#header, .blockbody, .blockfoot, .blocksubfoot, table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd, .postbitold, .postbitnew, .pagination span, .converse_page {
+#header, .blockbody, .blockfoot, .blocksubfoot, table.forums tbody tr, tr.threadbit, .postbitold, .postbitnew, .profile_widgets, .member_summary, .profile_content, dl.tabslight dd, .postbitold, .postbitnew, .pagination span, .converse_page, .ticker_item, #TickerBox * {
 	background-color: #333;
 	outline-color: #555;
 }
