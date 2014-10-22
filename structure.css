@@ -17,6 +17,9 @@
 img, div, dl, dt, dd, ul, ol, li, th, td, input, button {
 	vertical-align: middle;
 }
+frame {
+	height:800px;
+}
 body{
 	font-family: sans-serif;
 	font-size: 12px;
